@@ -1,0 +1,45 @@
+------------------------------------ Control -------------------------------------
+TIPO                                PATRON                          LEXEMA
+
+Etiqueta                palabra reservada Etiqueta                  Etiqueta
+Boton                   palabra reservada Boton                     Boton
+Check                   palabra reservada Check                     Check
+RadioBoton              palabra reservada RadioBoton                RadioBoton
+Texto                   palabra reservada Texto                     Texto
+AreaTexto               palabra reservada AreaTexto                 AreaTexto
+Clave                   palabra reservada Clave                     Clave
+Contenedor              palabra reservada Contenedor                Contenedor
+
+------------------------------------- Signos ------------------------------------
+TIPO                                PATRON                          LEXEMA
+
+Apertura                    Caracter <                              <
+Cierre                      Caracter >                              >
+Admiracion                  Caracter !                              !
+Guion                       Caracter -                              -
+Diagonal                    Caracter /                              /
+asterisco                   Caracter *                              *
+Punto y coma                Caracter ;                              ;
+Punto                       Caracter .                              .
+Parentesis Abierto          Caracter (                              (
+Parentesis Cerrado          Caracter )                              )
+
+
+
+-------------------------------------- Otros ------------------------------------
+TIPO                                PATRON                          LEXEMA
+
+Comentario linea        Secuencia de 2 diagonales, seguidos por     //Este es un comentario (en 1 linea)
+                        cualquier caracter, símbolo o signo
+Comentario lineas       Secuencia de una diagonal, seguido por      /*
+                        un asterisco, seguido por cualquier         Este comentario incluye varias
+                        caracter, símbolo, signo o salto de línea,  lineas y puede llevar $" + ¡
+                        seguido por un asterisco y por último una   */
+                        diagonal.
+Entero                  Secuencia de 1 o más dígitos                25
+Decimal                 Secuencia de 1 o más dígitos, seguidos      187.32
+                        por punto, seguido por 1 o más dígitos
+Cadena de texto         Secuencia de 1 o más letras del abecedario, Hola, $3 + $5 es = $8
+                        añadiendo tildes, dígitos, espacios,
+                        caracteres especiales como tabulaciones,
+                        todos los símbolos y signos de puntuación

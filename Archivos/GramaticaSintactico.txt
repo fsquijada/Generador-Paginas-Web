@@ -1,0 +1,39 @@
+SINTACTICO = LISTA_INSTRUCCIONES
+           | COMENTARIO
+
+COMENTARIO = // Comentario
+           | /* Comentario */
+
+LISTA_INSTRUCCIONES = INSTRUCCION
+                    | EOF
+
+INSTRUCCION = <!-- CONTROLES
+            | <!-- PROPIEDADES
+            | <!-- COLOCACION
+
+CONTROLES =  Controles LISTA_CONTROLES -->
+
+LISTA_CONTROLES = CONTROL ID ; LISTA_CONTROLES
+                | COMENTARIO LISTA_CONTROLES
+                | Controles
+
+PROPIEDADES = propiedades LISTA_PROPIEDADES -->
+
+LISTA_PROPIEDADES = CONTROL . PROPIEDAD ( VALORES ; LISTA_PROPIEDADES
+                  | COMENTARIO LISTA_PROPIEDADES
+                  | propiedades
+
+VALORES = VALOR VALORES
+        | VALOR )
+
+COLOCACION = Colocacion LISTA_COLOCACIONES -->
+
+LISTA_COLOCACIONES =  ID . PROPIEDAD ( VALORES ; LISTA_COLOCACIONES
+                   | COMENTARIO LISTA_PROPIEDADES
+                   | Colocacion
+
+TIPOS = ID 
+      | this
+
+TIPOS2 = setPosicion
+       | add
